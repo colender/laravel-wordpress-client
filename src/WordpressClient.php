@@ -60,6 +60,11 @@ class WordpressClient
         return Zttp::get($this->url('/types'), $params);
     }
 
+    public function custom($endpoint, array $params = [])
+    {
+        return Zttp::get($this->url('/'.$endpoint), $params);
+    }
+
     public function statuses(array $params = [], string $status = '')
     {
         $suffix = $status ? "/{$status}" : '';
