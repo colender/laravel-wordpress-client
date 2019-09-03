@@ -1,4 +1,4 @@
-# Wordpress json-api client for Laravel 5.5.*
+# Wordpress json-api client for Laravel 5.6.*
 A small client to request data from a wordpress project using the built-in JSON api.
 
 ## About
