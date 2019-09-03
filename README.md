@@ -6,7 +6,7 @@ This package uses [kitetail/zttp](https://github.com/kitetail/zttp) which is a l
 
 ## Install
 ```bash
-$ composer require jeffochoa/laravel-wordpress-client
+$ composer require colender/laravel-wordpress-client
 ```
 
 ## Config
