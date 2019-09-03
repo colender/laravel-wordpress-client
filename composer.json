@@ -1,5 +1,5 @@
 {
-    "name": "jeffochoa/laravel-wordpress-client",
+    "name": "colender/laravel-wordpress-client",
     "description": "A small client to request data from a wordpress project using the built-in JSON api.",
     "type": "library",
     "version": "1.0.0",
