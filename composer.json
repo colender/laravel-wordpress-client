@@ -5,7 +5,7 @@
     "version": "1.0.1",
     "require": {
         "laravel/framework": "^8.0",
-        "guzzlehttp/guzzle": "^7.1"
+        "guzzlehttp/guzzle": "^7.0"
         
        
     },
