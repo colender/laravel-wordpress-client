@@ -14,7 +14,7 @@ class WordpressClientTest extends TestCase
 {
     private $wordpress;
 
-    public function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->wordpress = new WordpressClient(config('wordpress.api_url'));

@@ -2,7 +2,8 @@
 
 namespace WordpressClient\Providers;
 
-use Zttp\ZttpResponse;
+//use Zttp\ZttpResponse;
+use Illuminate\Http\Client;
 use WordpressClient\WordpressClient;
 use Illuminate\Support\ServiceProvider;
 
@@ -13,9 +14,9 @@ class WordpressClientServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        ZttpResponse::macro('collection', function () {
+        \Illuminate\Http\Client\Response::macro('collection', function () {
             return collect($this->json());
-        });
+        }); 
     }
 
     /**

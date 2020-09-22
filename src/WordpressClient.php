@@ -3,6 +3,7 @@
 namespace WordpressClient;
 
 use Zttp\Zttp;
+use Illuminate\Support\Facades\Http;
 
 /**
  * Delete this folder and have fun
@@ -22,52 +23,52 @@ class WordpressClient
 
     public function posts(array $params = [])
     {
-        return Zttp::get($this->url('/posts'), $params);
+        return Http::get($this->url('/posts'), $params);
     }
 
     public function categories(array $params = [])
     {
-        return Zttp::get($this->url('/categories'), $params);
+        return Http::get($this->url('/categories'), $params);
     }
 
     public function tags(array $params = [])
     {
-        return Zttp::get($this->url('/tags'), $params);
+        return Http::get($this->url('/tags'), $params);
     }
 
     public function pages(array $params = [])
     {
-        return Zttp::get($this->url('/pages'), $params);
+        return Http::get($this->url('/pages'), $params);
     }
 
     public function taxonomies(array $params = [])
     {
-        return Zttp::get($this->url('/taxonomies'), $params);
+        return Http::get($this->url('/taxonomies'), $params);
     }
 
     public function media(array $params = [])
     {
-        return Zttp::get($this->url('/media'), $params);
+        return Http::get($this->url('/media'), $params);
     }
 
     public function users(array $params = [])
     {
-        return Zttp::get($this->url('/users'), $params);
+        return Http::get($this->url('/users'), $params);
     }
 
     public function types(array $params = [])
     {
-        return Zttp::get($this->url('/types'), $params);
+        return Http::get($this->url('/types'), $params);
     }
 
     public function custom($endpoint, array $params = [])
     {
-        return Zttp::get($this->url('/'.$endpoint), $params);
+        return Http::get($this->url('/'.$endpoint), $params);
     }
 
     public function statuses(array $params = [], string $status = '')
     {
         $suffix = $status ? "/{$status}" : '';
-        return Zttp::get($this->url("/statuses{$suffix}"), $params);
+        return Http::get($this->url("/statuses{$suffix}"), $params);
     }
 }
